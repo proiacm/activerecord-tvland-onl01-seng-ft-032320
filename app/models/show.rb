@@ -6,9 +6,6 @@ class Show < ActiveRecord::Base
   def actors_list 
     arr = []
     list = self.actors.pluck(:first_name, :last_name)
-    arr << list.split(",").join(" ")
-    
+     arr << list.join(" ")
   end
-
-
 end
